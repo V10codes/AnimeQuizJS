@@ -163,6 +163,7 @@ forward.addEventListener("click", () => {
     audioElement.play();
   }
   fillButtons();
+  reset();
 });
 //backward playBack
 backward.addEventListener("click", () => {
@@ -183,6 +184,7 @@ backward.addEventListener("click", () => {
     audioElement.play();
   }
   fillButtons();
+  reset();
 });
 // play/pause click
 playPause.addEventListener("click", () => {
@@ -283,4 +285,11 @@ function fillButtons() {
   }
   console.log(fillingOptions);
   fillingOptions.length = 0;
+}
+
+function reset() {
+  options.forEach((element) => {
+    element.style.backgroundColor = "black";
+    element.style.color = "white";
+  });
 }
